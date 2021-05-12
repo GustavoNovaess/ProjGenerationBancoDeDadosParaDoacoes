@@ -1,7 +1,7 @@
 package projeto.bloco1;
 
 import java.util.Scanner;
-
+// "////" representa coisas específicas que ainda precisa fazer
 public class AplicacaoDoacao {
 
 	public static void main(String[] args) {
@@ -28,6 +28,7 @@ public class AplicacaoDoacao {
 			
 			case '1': // Executar instruções da classe recebedor
 				System.out.println("\nRECEBEDOR\n");
+				//// Imprimir a cesta
 				break;
 				
 			case '2': // Executar instruções da classe doador
