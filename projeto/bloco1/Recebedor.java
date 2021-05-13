@@ -99,7 +99,7 @@ public class Recebedor extends PessoasClasse implements PessoasInterface {
 			}
 		}
 		
-		public void cadastro() {
+		/*public void cadastro() {
 			
 			System.out.print("Nome: ");
 			super.setNome(entrada.nextLine());
@@ -129,8 +129,42 @@ public class Recebedor extends PessoasClasse implements PessoasInterface {
 			
 			
 			
-		}
+		}*/
 		
+		
+		public Recebedor cadastro() {
+			
+			Recebedor recebedor = new Recebedor();
+			System.out.print("Nome: ");
+			recebedor.setNome(entrada.nextLine());
+			
+			System.out.print("\nIdade: ");
+			recebedor.setIdade(entrada.nextInt());
+			entrada.nextLine();
+			
+			System.out.print("\nEndereço: ");
+			recebedor.setEndereco(entrada.nextLine());
+			
+			System.out.print("\nCPF ou RG: ");
+			recebedor.setCpfRg(entrada.nextLine());
+			
+			System.out.print("\nTelefone: ");
+			recebedor.setTelefone(entrada.nextLine());
+			
+			System.out.print("\nRegião: ");
+			recebedor.setRegiao(entrada.nextLine());
+			
+			System.out.print("\nQuantidade de Familiares: ");
+			recebedor.setQuantidadeDeFamiliares(entrada.nextInt());
+			
+			System.out.print("\nHorario de Retirada da Cesta: ");
+			recebedor.setHorarioDeRetirada(entrada.nextInt());
+			entrada.nextLine();
+			
+			return recebedor;
+			
+		}
+
 		public String toString() {
 			return "[ Nome: " + super.getNome() + "\t\tIdade: " + super.getIdade() + "\t\tEndereço: " + super.getEndereco() + "\nCPF/RG: " + super.getCpfRg() + "\t\tTelefone: " + super.getTelefone() +
 					"\tRegião: " + super.getRegiao() + "\nQuantidade de Familiares: " + this.getQuantidadeDeFamiliares() +"\tTipo de Cesta: " + this.tipoDeCesta + "\tHorario de Retirada da Cesta: " + this.getHorarioDeRetirada()+ "]\n";
