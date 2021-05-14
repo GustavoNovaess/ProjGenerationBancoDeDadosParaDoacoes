@@ -36,12 +36,8 @@ public class PessoasClasse {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 
-		if (endereco.equals("x")) {
-			System.out.println("Se apresente no posto de doações X,  "
-					+ "\nmais próximo de sua região, e faça a retirada da sua Cesta Especial");
-		}
 	}
-	//
+	
 	public String getCpfRg() {
 		return cpfRg;
 	}

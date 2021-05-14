@@ -2,7 +2,7 @@ package projeto.bloco1;
 
 import java.util.Scanner;
 
-public class Recebedor extends PessoasClasse implements PessoasInterface {
+public class Recebedor extends PessoasClasse {
 
 	
 	Scanner entrada = new Scanner(System.in);
@@ -30,9 +30,6 @@ public class Recebedor extends PessoasClasse implements PessoasInterface {
 			if(quantidadeDeFamiliares > 6) {
 				this.tipoDeCesta = 'G';
 			}
-			/*if(quantidadeDeFamiliares == 00) {
-				this.tipoDeCesta = 'E';//cesta especial
-			}*/
 		}
 		
 		public int getHorarioDeRetirada() {
@@ -45,93 +42,57 @@ public class Recebedor extends PessoasClasse implements PessoasInterface {
 		
 		
 		//M√©todo
-		void tipoDeCesta () {
-			switch (this.tipoDeCesta){
+		void tipoDeCesta (char cesta) {
+			switch (cesta){
 				case 'P':
-					System.out.println("Sua cesta ser√° a Cesta P!");
+					System.out.println("Sua cesta ser· a Cesta P!");
 					System.out.println("\n\t" + "Itens da CESTA P:\n");
 					System.out.println("ALIMENTOS\n");
-					System.out.println("1 Saco de arroz\n2 sacos de feij√£o\n1 pacote de sal\n1 pacote de a√ß√∫car\n2 pacotes de macarr√£o"
-							+ "\n1 pacote de fuba\n2 caixas de leite\n1 pacote de caf√©\n2 garrafas de √≥leo\n1 saco de farinha"
-							+ "\n2 pacotes de extrato de tomate\n");
+					System.out.println("1x Saco de arroz\t\t2x sacos de feij„o\t\t1x pacote de sal\n1x pacote de aÁucar\t\t2x pacotes de macarr„o"
+							+ "\t\t1x pacote de fuba\n2x caixas de leite\t\t1x pacote de cafÈ\t\t2x garrafas de Ûleo\n1x saco de farinha"
+							+ "\t\t2x pacotes de extrato de tomate\n");
 					System.out.println("PRODUTOS DE LIMPEZA / HIGIENE PESSOAL\n");
-					System.out.println("2 sabonetes\n* M√°scaras de Pano(Qtd de m√°scaras a definir na retirada)\n1 garrafa grande de √°lcool em gel\n"
-							+ "3 escovas de dente\n4 pastas de dente\n2 detergentes\n1 bucha de lavar lou√ßa\n1 pacote de sab√£o em p√≥(0.5 kg)\n1 sab√£o em pedra\n"
-							+ "1 garrafa de √°lcool 70\n");
+					System.out.println("2x sabonetes\t\t3x m·scaras de Pano\t\t3x m·scaras PFF2\n1x garrafa grande de ·lcool em gel\t\t"
+							+ "3x escovas de dente\t\t4x pastas de dente\n2x detergentes\t\t1x bucha de lavar louÁa\t\t1x pacote de sab„o em pÛ(0.5 kg)\n1x sab„o em pedra\t\t"
+							+ "1 garrafa de ·lcool 70\n");
 					System.out.println("COBERTORES E TOALHAS\n");
-					System.out.println("1 cobertor\n2 toalhas de banho\n1 toalha de rosto");
+					System.out.println("1x cobertor\t\t2x toalhas de banho\n1x toalha de rosto\n");
 					break;
 					
 				case 'M':
-					System.out.println("Sua cesta ser√° a Cesta M!");
+					System.out.println("Sua cesta ser· a Cesta M!");
 					System.out.println("\n\t" + "Itens da CESTA M:\n");
 					System.out.println("ALIMENTOS\n");
-					System.out.println("2 Sacos de arroz\n4 sacos de feij√£o\n1 pacote de sal\n2 pacotes de a√ß√∫car\n4 pacotes de macarr√£o\n"
-							+ "2 pacotes de fub√°\n4 caixas de leite\n2 pacotes de caf√©\n2 garrafas de √≥leo\n2 sacos de farinha\n"
-							+ "4 pacotes de extrato de tomate\n");
+					System.out.println("2x Saco de arroz\t\t4x sacos de feij„o\t\t1x pacote de sal\n2x pacote de aÁucar\t\t4x pacotes de macarr„o"
+							+ "\t\t2x pacote de fuba\n4x caixas de leite\t\t2x pacote de cafÈ\t\t2x garrafas de Ûleo\n2x saco de farinha"
+							+ "\t\t4x pacotes de extrato de tomate\n");
 					System.out.println("PRODUTOS DE LIMPEZA / HIGIENE PESSOAL\n");
-					System.out.println("4 sabonetes\n* M√°scaras de Pano(Qtd de m√°scaras a definir na retirada)\n2 garrafas grandes de √°lcool em gel\n"
-							+ "6 escovas de dente\n6 pastas de dente\n3 detergentes\n2 buchas de lavar lou√ßa\n2 pacotes de sab√£o em p√≥(0.5 kg)\n2 sab√µes em pedra\n"
-							+ "2 garrafas de √°lcool 70\n");
+					System.out.println("4x sabonetes\t\t6x m·scaras de Pano\t\t6x m·scaras PFF2\n2x garrafa grande de ·lcool em gel\t\t"
+							+ "6x escovas de dente\t\t6x pastas de dente\n3x detergentes\t\t2x bucha de lavar louÁa\t\t2x pacote de sab„o em pÛ(0.5 kg)\n2x sab„o em pedra\t\t"
+							+ "2 garrafa de ·lcool 70\n");
 					System.out.println("COBERTORES E TOALHAS\n");
-					System.out.println("2 cobertores\n3 toalhas de banho\n2 toalhas de rosto");
+					System.out.println("2x cobertor\t\t3x toalhas de banho\n2x toalha de rosto\n");
 					break;
 					
 				case 'G':
-					System.out.println("Sua cesta ser√° a Cesta G!");
+					System.out.println("Sua cesta ser· a Cesta G!");
 					System.out.println("\n\t" + "Itens da CESTA G:\n");
 					System.out.println("ALIMENTOS\n");
-					System.out.println("3 Sacos de arroz\n6 sacos de feij√£o\n2 pacote de sal\n4 pacotes de a√ß√∫car\n5 pacotes de macarr√£o\n"
-							+ "4 pacotes de fub√°\n5 caixas de leite\n2 pacotes de caf√©\n4 garrafas de √≥leo\n2 sacos de farinha\n"
-							+ "5 pacotes de extrato de tomate\n");
+					System.out.println("3x Saco de arroz\t\t6x sacos de feij„o\t\t2x pacote de sal\n4x pacote de aÁucar\t\t5x pacotes de macarr„o"
+							+ "\t\t4x pacote de fuba\n5x caixas de leite\t\t2x pacote de cafÈ\t\t4x garrafas de Ûleo\n2x saco de farinha"
+							+ "\t\t5x pacotes de extrato de tomate\n");
 					System.out.println("PRODUTOS DE LIMPEZA / HIGIENE PESSOAL\n");
-					System.out.println("8 sabonetes\n* M√°scaras de Pano(Qtd de m√°scaras a definir na retirada)\n4 garrafas grandes de √°lcool em gel\n"
-							+ "6 escovas de dente\n6 pastas de dente\n3 detergentes\n2 buchas de lavar lou√ßa\n2 pacotes de sab√£o em p√≥(0.5 kg)\n3 sab√µes em pedra\n"
-							+ "2 garrafas de √°lcool 70\n");
+					System.out.println("8x sabonetes\t\t9x m·scaras de Pano\t\t9x m·scaras PFF2\n4x garrafa grande de ·lcool em gel\t\t"
+							+ "6x escovas de dente\t\t6x pastas de dente\n3x detergentes\t\t2x bucha de lavar louÁa\t\t2x pacote de sab„o em pÛ(0.5 kg)\n3x sab„o em pedra\t\t"
+							+ "2 garrafa de ·lcool 70\n");
 					System.out.println("COBERTORES E TOALHAS\n");
-					System.out.println("4 cobertores\n4 toalhas de banho\n2 toalhas de rosto");
+					System.out.println("4x cobertor\t\t4x toalhas de banho\n2x toalha de rosto\n");
 					break;
 				
-				/*default:
-					System.out.println("Sua cesta ser√° a Cesta ESPECIAL!");
-					System.out.println("\n\t" + "Itens da CESTA ESPECIAL:");
-					break;*/
 			}
 		}
 		
-		/*public void cadastro() {
-			
-			System.out.print("Nome: ");
-			super.setNome(entrada.nextLine());
-			
-			System.out.print("\nIdade: ");
-			super.setIdade(entrada.nextInt());
-			entrada.nextLine();
-			
-			System.out.print("\nEndereÁo: ");
-			super.setEndereco(entrada.nextLine());
-			
-			System.out.print("\nCPF ou RG: ");
-			super.setCpfRg(entrada.nextLine());
-			
-			System.out.print("\nTelefone: ");
-			super.setTelefone(entrada.nextLine());
-			
-			System.out.print("\nRegi„o: ");
-			super.setRegiao(entrada.nextLine());
-			
-			System.out.print("\nQuantidade de Familiares: ");
-			this.setQuantidadeDeFamiliares(entrada.nextInt());
-			
-			System.out.print("\nHorario de Retirada da Cesta: ");
-			this.setHorarioDeRetirada(entrada.nextInt());
-			entrada.nextLine();
-			
-			
-			
-		}*/
-		
-		
+
 		public Recebedor cadastro() {
 			
 			Recebedor recebedor = new Recebedor();
@@ -157,7 +118,7 @@ public class Recebedor extends PessoasClasse implements PessoasInterface {
 			System.out.print("\nQuantidade de Familiares: ");
 			recebedor.setQuantidadeDeFamiliares(entrada.nextInt());
 			
-			System.out.print("\nHorario de Retirada da Cesta: ");
+			System.out.print("\nHorario de Retirada da Cesta (Das 12h ‡s 18h): ");
 			recebedor.setHorarioDeRetirada(entrada.nextInt());
 			entrada.nextLine();
 			
@@ -167,6 +128,6 @@ public class Recebedor extends PessoasClasse implements PessoasInterface {
 
 		public String toString() {
 			return "[ Nome: " + super.getNome() + "\t\tIdade: " + super.getIdade() + "\t\tEndereÁo: " + super.getEndereco() + "\nCPF/RG: " + super.getCpfRg() + "\t\tTelefone: " + super.getTelefone() +
-					"\tRegi„o: " + super.getRegiao() + "\nQuantidade de Familiares: " + this.getQuantidadeDeFamiliares() +"\tTipo de Cesta: " + this.tipoDeCesta + "\tHorario de Retirada da Cesta: " + this.getHorarioDeRetirada()+ "]\n";
+					"\tRegi„o: " + super.getRegiao() + "\nQuantidade de Familiares: " + this.getQuantidadeDeFamiliares() +"\tTipo de Cesta: " + this.tipoDeCesta + "\tHorario de Retirada da Cesta: " + this.getHorarioDeRetirada()+ "h]\n";
  		}
 }

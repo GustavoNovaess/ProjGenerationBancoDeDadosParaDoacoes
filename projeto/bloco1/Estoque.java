@@ -63,18 +63,6 @@ public class Estoque {
 		
 		estoqueGeral.add(new Estoque("Pacote de Café(500g)",10));
 		
-		estoqueGeral.add(new Estoque("Pacote de Bolacha de Água e Sal",10));
-		
-		estoqueGeral.add(new Estoque("Pacote de Bolacha de Maizena",10));
-		
-		estoqueGeral.add(new Estoque("Lata de Sardinha",10));
-		
-		estoqueGeral.add(new Estoque("Pacote de Bisnaga",10));
-		
-		estoqueGeral.add(new Estoque("Caixa de Suco/Toddy",10));
-		
-		estoqueGeral.add(new Estoque("Garrafa de Água(500ml)",10));
-		
 		return estoqueGeral;
 	}
 	

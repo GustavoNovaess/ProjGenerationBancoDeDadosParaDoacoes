@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import projeto.bloco1.*;
 
-public class Doador extends PessoasClasse implements PessoasInterface {
+public class Doador extends PessoasClasse {
 	
 	Scanner entrada = new Scanner(System.in);
 	
-	private String itemDoado; //Opções 1, 2 e 3
+	private String itemDoado; 
 	private int quantidade;
 
 	public String getAlimento() {
@@ -38,7 +38,7 @@ public class Doador extends PessoasClasse implements PessoasInterface {
 		if(itemDoado == 1) {
 			do {
 				System.out.println("DIGITE O NÚMERO REFERENTE AO TIPO DE ALIMENTO/SUPRIMENTO QUE DESEJA DOAR:\n");
-				//System.out.println("Digite a quantidade dos alimentos/suprimentos que você pretende doar\n");
+				
 				
 				System.out.println("======MENU DE OPÇOES======\n");
 				System.out.println("1 - Arroz(5kg) \n"
@@ -52,27 +52,20 @@ public class Doador extends PessoasClasse implements PessoasInterface {
 						+ "9 - Açucar \n"
 						+ "10 - Extrato de Tomate \n"
 						+ "11 - Café \n"
-						+ "12 - Bolacha Água e Sal \n"
-						+ "13 - Bolacha de Maizena \n"
-						+ "13 - Sardinha \n"
-						+ "14 - Bisnaga \n"
-						+ "15 - Bolo Pronto \n"
-						+ "16 - Caixa de Suco/Toddy \n"
-						+ "17 - Garrafa de água\n"
-						+ "18 - Finalizar");
+						+ "12 - Finalizar");
 				
 				System.out.print("ESPERANDO NÚMERO... ");
 				opcao = entrada.nextInt();
 				
-				if (opcao > 0 && opcao < 18) {
+				if (opcao > 0 && opcao < 12) {
 					System.out.println("\nDigite a quantidade dos alimentos/suprimentos que você pretende doar:");
 					quantidade = entrada.nextInt();
 					estoqueAtualizando.get(opcao-1).setQuantidade(estoqueAtualizando.get(opcao-1).getQuantidade() + quantidade);
-				} else if (opcao <= 0 || opcao >= 19) {
+				} else if (opcao <= 0 || opcao >= 13) {
 					System.err.println("\nOPÇÃO DIGITADA NÃO EXISTE, POR FAVOR INSIRA NOVAMENTE\n");
 				}
 				
-			}while(opcao != 18);
+			}while(opcao != 12);
 			
 		}
 
@@ -80,7 +73,7 @@ public class Doador extends PessoasClasse implements PessoasInterface {
 				
 				do {
 					System.out.println("DIGITE O NÚMERO REFERENTE AO TIPO DE COBERTOR/TOALHA QUE DESEJA DOAR:\n");
-					//System.out.println("Digite a quantidade dos alimentos/suprimentos que você pretende doar\n");
+					
 					
 					System.out.println("======MENU DE OPÇOES======\n");
 					System.out.println("1 - Cobertores \n"
@@ -108,7 +101,7 @@ public class Doador extends PessoasClasse implements PessoasInterface {
 				do {
 					
 					System.out.println("DIGITE O NÚMERO REFERENTE AO TIPO DE PRODUTO DE LIMPEZA OU HIGIENE PESSOAL QUE DESEJA DOAR:\n");
-					//System.out.println("Digite a quantidade dos alimentos/suprimentos que você pretende doar\n");
+					
 					
 					System.out.println("======MENU DE OPÇOES======\n");
 					System.out.println("1 - Sabonetes \n"
@@ -116,26 +109,26 @@ public class Doador extends PessoasClasse implements PessoasInterface {
 							+ "3 - Máscaras PFF2 \n"
 							+ "4 - Álcool em Gel \n"
 							+ "5 - Escova \n"
-							+ "5 - Pasta de Dente \n"
-							+ "6 - Detergente \n"
-							+ "7 - Bucha de lavar louça \n"
-							+ "8 - Sabão em Pó \n"
-							+ "9 - Sabão em Pedra \n"
-							+ "10 - Álcool 70 \n"
-							+ "11 - Finalizar \n");
+							+ "6 - Pasta de Dente \n"
+							+ "7 - Detergente \n"
+							+ "8 - Bucha de lavar louça \n"
+							+ "9 - Sabão em Pó \n"
+							+ "10 - Sabão em Pedra \n"
+							+ "11 - Álcool 70 \n"
+							+ "12 - Finalizar \n");
 					
 					System.out.print("ESPERANDO NÚMERO... ");
 					opcao = entrada.nextInt();
 					
-					if (opcao > 0 && opcao < 11) {
+					if (opcao > 0 && opcao < 12) {
 						System.out.println("\nDigite a quantidade dos produtos de limpeza/higiene que você pretende doar:");
 						quantidade = entrada.nextInt();
 						estoqueAtualizando.get(opcao-1).setQuantidade(estoqueAtualizando.get(opcao-1).getQuantidade() + quantidade);
-					} else if (opcao <= 0 || opcao >= 12) {
+					} else if (opcao <= 0 || opcao >= 13) {
 						System.err.println("\nOPÇÃO DIGITADA NÃO EXISTE, POR FAVOR INSIRA NOVAMENTE\n");
 					}
 					
-				}while(opcao != 11);
+				}while(opcao != 12);
 				
 				
 				
@@ -181,7 +174,7 @@ public class Doador extends PessoasClasse implements PessoasInterface {
 		doador.setTelefone(entrada.nextLine());
 		
 		System.out.print("\nRegião: ");
-		super.setRegiao(entrada.nextLine());
+		doador.setRegiao(entrada.nextLine());
 		
 		return doador;
 	}
